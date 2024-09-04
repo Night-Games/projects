@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OfficeAddin>
-  <Id>YOUR_ADDIN_ID</Id>
+  <Id>night_video_excel</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>ECO GS</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
