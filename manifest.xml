@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeAddin>
+  <Id>YOUR_ADDIN_ID</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>ECO GS</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Night Video" />
+  <Description DefaultValue="Musiquinha tema da planilha." />
+  <AppDomains>
+    <AppDomain>https://ecogs2022.github.io/Testes</AppDomain>
+  </AppDomains>
+  <Permissions>ReadWriteDocument</Permissions>
+  <Hosts>
+    <Host Name="Night" />
+  </Hosts>
+  <VersionOverrides>
+    <VersionOverride Version="1.1">
+      <OfficeTab>
+        <Group>
+          <Label>Incorporar Vídeo</Label>
+          <Control xsi:type="TaskPane">
+            <SourceLocation DefaultValue="https://ecogs2022.github.io/Testes/night_video.html" />
+            <Title>Incorporar Vídeo</Title>
+          </Control>
+        </Group>
+      </OfficeTab>
+    </VersionOverride>
+  </VersionOverrides>
+</OfficeAddin>
