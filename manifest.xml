@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OfficeAddin>
-  <Id>night_video_excel</Id>
+<OfficeAddin
+    xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:office="http://schemas.microsoft.com/office/office/1.1">
+  <Id>e5d47b40-66d1-4b0e-9d38-6d2e7f0067b1</Id> <!-- Substitua com seu GUID ou ID único -->
   <Version>1.0.0.0</Version>
   <ProviderName>ECO GS</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
@@ -11,7 +14,7 @@
   </AppDomains>
   <Permissions>ReadWriteDocument</Permissions>
   <Hosts>
-    <Host Name="Night" />
+    <Host Name="Excel" />
   </Hosts>
   <VersionOverrides>
     <VersionOverride Version="1.1">
