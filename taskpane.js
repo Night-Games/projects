@@ -1,28 +1,22 @@
-Office.onReady(function(info) {
-  if (info.host === Office.HostType.Excel) {
-    // Office is ready
-    // Event handler for button click
-    $("#video").on("click", run);
-  }
+Office.onReady(info => {
+    if (info.host === Office.HostType.Excel) {
+        Office.context.ui.addHandlerAsync(Office.EventType.DialogMessageReceived, function (event) {
+            if (event.message === 'addVideo') {
+                addContentAppToSheet();
+            }
+        });
+    }
 });
 
-async function run() {
-  // Display a dialog to show the HTML content
-  Office.context.ui.displayDialogAsync(
-    "https://ecogs2022.github.io/Testes/taskpane.html", // Correct URL
-    { height: 500, width: 800 }, // Adjust size as needed
-    async (result) => {
-      if (result.status === Office.AsyncResultStatus.Succeeded) {
-        const dialog = result.value;
-        // Optionally handle dialog events if needed
-        dialog.addHandlerAsync(Office.EventType.DialogMessageReceived, (event) => {
-          if (event.message === "close") {
-            dialog.closeAsync();
-          }
+async function addContentAppToSheet() {
+    try {
+        await Excel.run(async (context) => {
+            const sheet = context.workbook.worksheets.getActiveWorksheet();
+            const range = sheet.getRange("A1"); // Você pode definir onde deseja adicionar o conteúdo
+            range.values = [["<iframe width='560' height='315' src='https://www.youtube.com/embed/CjP3VlbIfDA' frameborder='0' allowfullscreen></iframe>"]];
+            await context.sync();
         });
-      } else {
-        console.error("Error displaying dialog: ", result.error.message);
-      }
+    } catch (error) {
+        console.error('Erro ao adicionar conteúdo: ', error);
     }
-  );
 }
