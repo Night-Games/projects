@@ -30,8 +30,12 @@
     <iframe id="video" src="" frameborder="0" allowfullscreen></iframe>
     <button id="addVideoButton">Adicionar Vídeo</button>
     <script>
-        document.getElementById('addVideoButton').addEventListener('click', function() {
-            Office.context.ui.messageParent('addVideo');
+        Office.onReady(info => {
+            if (info.host === Office.HostType.Excel) {
+                document.getElementById('addVideoButton').addEventListener('click', function() {
+                    Office.context.ui.messageParent('addVideo');
+                });
+            }
         });
 
         function setVideoUrl(url) {
