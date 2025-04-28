@@ -14,5 +14,8 @@
   <DefaultSettings>
     <SourceLocation Default="https://ecogs2022.github.io/Projetos_Night_Games/index.html"/>
   </DefaultSettings>
+  <AppDomains>
+    <AppDomain>https://ecogs2022.github.io</AppDomain>
+  </AppDomains>
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
