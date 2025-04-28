@@ -7,16 +7,14 @@
   <ProviderName>Night Games</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName>Night Video Embedder</DisplayName>
-  <Description>Embed a YouTube video directly into the sheet</Description>
-  <IconUrl Default="https://YOUR-GITHUB-PAGES-URL/icon.png" />
-  <HighResolutionIconUrl Default="https://YOUR-GITHUB-PAGES-URL/icon.png" />
+  <Description>Embed a YouTube video directly into the sheet</Description>  
 
   <Hosts>
     <Host Name="Workbook" />
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation Default="https://YOUR-GITHUB-PAGES-URL/index.html"/>
+    <SourceLocation Default="https://ecogs2022.github.io/Projetos_Night_Games/"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
