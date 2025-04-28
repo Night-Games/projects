@@ -8,13 +8,13 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName>Night Video Embedder</DisplayName>
   <Description>Embed a YouTube video directly into the sheet with autoplay control</Description>
-  <IconUrl Default="https://ecogs2022.github.io/Projetos_Night_Games/icon.png" />
-  <HighResolutionIconUrl Default="https://ecogs2022.github.io/Projetos_Night_Games/icon.png" />
+  <IconUrl Default="https://seu-usuario.github.io/nome-do-repositorio/icon.png" />
+  <HighResolutionIconUrl Default="https://seu-usuario.github.io/nome-do-repositorio/icon.png" />
   <Hosts>
     <Host Name="Workbook" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation Default="https://ecogs2022.github.io/Projetos_Night_Games/video_embedder.html"/>
+    <SourceLocation Default="https://seu-usuario.github.io/nome-do-repositorio/video_embedder.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
