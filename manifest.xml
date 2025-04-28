@@ -17,7 +17,8 @@
   <AppDomains>
     <AppDomain>https://ecogs2022.github.io</AppDomain>
     <AppDomain>https://ecogs2022.github.io/Projetos_Night_Games</AppDomain>
-    <AppDomain>https://github.com/ECOGS2022/Projetos_Night_Games</AppDomain>
+    <AppDomain>https://ecogs2022.github.io/Projetos_Night_Games/index.html</AppDomain>
+    <AppDomain>https://ecogs2022.github.io/Projetos_Night_Games/manifest.xml</AppDomain>
   </AppDomains>
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
