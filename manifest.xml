@@ -16,7 +16,8 @@
   </DefaultSettings>
   <AppDomains>
     <AppDomain>https://ecogs2022.github.io</AppDomain>
-    <AppDomain>https://ecogs2022.github.io/Projetos_Night_Games</AppDomain> <!-- Garantindo que o caminho do projeto também está especificado -->
+    <AppDomain>https://ecogs2022.github.io/Projetos_Night_Games</AppDomain>
+    <AppDomain>https://github.com/ECOGS2022/Projetos_Night_Games</AppDomain>
   </AppDomains>
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
