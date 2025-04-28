@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night Video Embedder</title>
-    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-    <script src="functions.js"></script>
 </head>
-<body>
-    <script>
-        Office.onReady((info) => {
-            if (info.host === Office.HostType.Excel) {
-                insertYouTubeVideo();
-            }
-        });
-    </script>
+<body>    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Re4FlYXe6Cg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </body>
 </html>
