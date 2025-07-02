@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Night Video Embedder</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Are you lost ?</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      background: url('https://i.pinimg.com/originals/7a/63/d4/7a63d4c91a83613b8088c9cde3f3ceaf.gif') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+  color: white;
+  font-size: 5rem;
+  text-shadow: 2px 2px 10px black;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: normal;
+  cursor: pointer; /* opcional, muda o cursor pra indicar interatividade */
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+h1:hover {
+  transform: translateY(-10px); /* sobe 10px quando hover */
+}
+
+}
+  </style>
 </head>
-<body>    
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Re4FlYXe6Cg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<body>
+  <h1>Are you lost ?</h1>
 </body>
 </html>
