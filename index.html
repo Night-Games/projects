@@ -9,33 +9,138 @@
       margin: 0;
       height: 100%;
       width: 100%;
+      font-family: Georgia, 'Times New Roman', serif;
     }
+
     body {
-      background: url('https://i.pinimg.com/originals/7a/63/d4/7a63d4c91a83613b8088c9cde3f3ceaf.gif') no-repeat center center;
+      background: black;
+      overflow: hidden;
+    }
+
+    /* OVERLAY - Tela preta inicial */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    #overlay h1 {
+      color: white;
+      font-size: 5rem;
+      text-shadow: 2px 2px 10px black;
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: normal;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #overlay button {
+      background: none;
+      color: white;
+      border: 2px solid white;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    #overlay button:hover {
+      background: white;
+      color: black;
+    }
+
+    #overlay > div {
+      margin-top: 5rem;
+      display: flex;
+      gap: 1rem;
+    }
+    
+    #main {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      background: url('https://ecogs2022.github.io/Projetos_Night_Games/Outros/mist.gif') no-repeat center center;
       background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    h1 {
-  color: white;
-  font-size: 5rem;
-  text-shadow: 2px 2px 10px black;
-  margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-weight: normal;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
 
-h1:hover {
-  transform: translateY(-10px);
-}
-
-}
+    #main h1 {
+      color: white;
+      font-size: 5rem;
+      text-shadow: 2px 2px 10px black;
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: normal;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+  
+    #main h1:hover {
+      transform: translateY(-10px);
+    }
+  
+    #overlay h1:hover {
+      transform: translateY(-10px);
+    }
   </style>
 </head>
-<body>
-  <h1>Are you lost ?</h1>
+<body>  
+  <div id="overlay">
+    <h1>Are you lost ?</h1>
+    <div>
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+  </div>
+
+  <div id="main">
+    <h1 id="mainText"></h1>
+  </div>
+
+  <audio id="bgAudio" loop>
+    <source id="audioSource" src="https://ecogs2022.github.io/Projetos_Night_Games/Outros/L%20no%20Nakama.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    const main = document.getElementById('main');
+    const mainText = document.getElementById('mainText');
+    const audio = document.getElementById('bgAudio');
+    const audioSource = document.getElementById('audioSource');
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    
+    const audioLinks = {
+      yes: 'https://ecogs2022.github.io/Projetos_Night_Games/Outros/L%20no%20Nakama.mp3',
+      no: 'https://ecogs2022.github.io/Projetos_Night_Games/Outros/Rem.mp3'
+    };
+
+    function startExperience(text, audioUrl) {
+      overlay.style.display = 'none';
+      mainText.textContent = text;
+      main.style.display = 'flex';
+      
+      audioSource.src = audioUrl;
+      audio.load();
+      audio.play();
+      
+      document.title = text;
+    }
+
+    yesBtn.addEventListener('click', () => startExperience('So am I', audioLinks.yes));
+    noBtn.addEventListener('click', () => startExperience('Because I am', audioLinks.no));
+  </script>
 </body>
 </html>
